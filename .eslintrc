@@ -1,0 +1,32 @@
+{
+  "parser":  "@typescript-eslint/parser",  // Specifies the ESLint parser
+  "extends":  [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",  // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": ["react"],
+  "parserOptions":  {
+    "ecmaVersion":  2018,  // Allows for the parsing of modern ECMAScript features
+    "sourceType":  "module"  // Allows for the use of imports
+  },
+  "rules":  {
+    "react/jsx-filename-extension": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    // note you must disable the base rule as it can report incorrect errors
+    "no-use-before-define": 0
+  }
+}

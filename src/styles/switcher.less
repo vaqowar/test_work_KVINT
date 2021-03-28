@@ -1,0 +1,74 @@
+.title {
+    margin-top: 50px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: #040F20;
+    // opacity: .13;
+    opacity: .5;
+}
+
+
+
+.ant-switch {
+    margin-top: 21px;
+
+    width: 36px;
+    max-width: unset;
+    min-width: unset;
+    height: 17px;
+
+    transition: .3s ease-in-out;
+
+    &[aria-checked="false"] {
+        background: #B5B5B5;
+
+        .ant-switch-handle {
+            &::before {
+                background: #919191;
+
+                &:hover {
+                    box-shadow: 0 0 4px #919191;
+                }
+            }            
+        }
+    }
+    &[aria-checked="true"] {
+        background: #0F213C;
+
+        .ant-switch-handle {
+            left: calc(100% - 24px + 6px);
+
+            &::before {
+                background: #01C8F8;
+            }            
+        }
+    }
+    &:focus, &:hover {
+        box-shadow: unset !important;
+    }
+    &-handle {
+        top: 0;
+        left: -6px;
+
+        width: 24px;
+        height: 100%;
+
+        &:before {
+            width: 24px;
+            height: 24px;
+
+            border-radius: 50%;
+
+            top: 50%;
+            transform: translateY(-50%);
+
+            transition: .3s ease-in-out;
+        }
+    }
+    .ant-click-animating-node {
+        display: none;
+    }
+}

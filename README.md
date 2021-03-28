@@ -1,1 +1,3 @@
-# test_work_KVINT
+# kvint-frontend-test-task
+
+Тестовая работа для KVINT
